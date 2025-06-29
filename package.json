@@ -1,0 +1,22 @@
+{
+  "name": "node-ffi-example",
+  "description": "Node.js FFI Example (Koffi, ffi-rs, ffi-napi)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Koffi",
+    "ffi-rs",
+    "ffi-napi"
+  ],
+  "author": "ssnangua",
+  "license": "MIT",
+  "dependencies": {
+    "ffi-napi": "^4.0.3",
+    "ffi-rs": "^1.2.12",
+    "iconv-lite": "^0.6.3",
+    "koffi": "^2.12.0"
+  }
+}
