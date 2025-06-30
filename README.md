@@ -23,3 +23,19 @@ node ./user32/koffi.js
 node ./user32/ffi-rs.js
 node ./user32/ffi-napi.js
 ```
+
+Run addon example:
+
+> Official example: [Pass arguments to a function](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
+
+```bash
+cd ./addon
+# Install dependencies: node-addon-api, bindings
+npm install
+# Install node-gyp globally:
+npm install node-gyp -g
+# Build addon:
+node-gyp rebuild
+# Run test:
+node ./test.js
+```

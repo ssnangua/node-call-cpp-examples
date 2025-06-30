@@ -1,6 +1,6 @@
 const { spawn } = require("child_process");
-const child = spawn("./native/add.exe", [1, 2]);
+const child = spawn("./native/add.exe", [1, 2.5]);
 
 child.stdout.on("data", (data) => {
-  console.log(parseInt(data.toString()));
+  console.log(parseFloat(data.toString()));
 });

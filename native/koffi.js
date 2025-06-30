@@ -6,7 +6,7 @@ const koffi = require("koffi");
 const lib = koffi.load("./native/add.dll");
 
 // 声明dll中的函数
-// const add = lib.func("add", "int", ["int", "int"]);
-const add = lib.func("int add(int left, int right)");
+// const add = lib.func("add", "double", ["double", "double"]);
+const add = lib.func("double add(double left, double right)");
 
-console.log(add(1, 2));
+console.log(add(1, 2.5));

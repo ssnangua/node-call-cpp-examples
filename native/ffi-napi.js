@@ -6,7 +6,7 @@ const ffi = require("ffi-napi");
 const { add } = new ffi.Library("./native/add.dll", {
   // 声明dll中的函数
   // 函数名: [返回值类型, [参数类型, ...]]
-  add: ["int", ["int", "int"]],
+  add: ["double", ["double", "double"]],
 });
 
-console.log(add(1, 2));
+console.log(add(1, 2.5));
