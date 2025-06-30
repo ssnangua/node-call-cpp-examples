@@ -1,2 +1,6 @@
 node_modules/
-build/
+
+addon/build/*
+!addon/build/Release/
+addon/build/Release/*
+!addon/build/Release/*.node
