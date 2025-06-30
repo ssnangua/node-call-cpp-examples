@@ -41,13 +41,13 @@ Run addon example:
 > Official `node-addon-api` example: [Pass arguments to a function](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
 
 ```bash
-cd ./addon
-# Install dependencies: node-addon-api, bindings
-npm install
 # Install node-gyp globally:
 npm install node-gyp -g
-# Build addon:
-node-gyp rebuild
+
+cd ./addon
+# Install dependencies (node-addon-api, bindings) and build addon:
+npm install
 # Run test:
 node ./test.js
+cd ..
 ```
