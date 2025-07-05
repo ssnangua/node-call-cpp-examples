@@ -2,12 +2,6 @@
 
 [addon](#addon) | [exe](#exe) | [user32.dll](#user32dll) | [dll](#dll) | [wasm](#wasm) | [wasi](#wasi)
 
-Install dependencies: [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
-
-```bash
-npm install
-```
-
 ## addon
 
 > Official `node-addon-api` example: [Pass arguments to a function](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
@@ -40,6 +34,12 @@ node ./exe/exe.js
 
 ## user32.dll
 
+Install [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
+
+```bash
+npm install
+```
+
 ```bash
 # Use user32.dll
 node ./user32/koffi.js
@@ -48,6 +48,12 @@ node ./user32/ffi-napi.js
 ```
 
 ## dll
+
+Install [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
+
+```bash
+npm install
+```
 
 Install [MinGW](https://www.mingw-w64.org/)
 
