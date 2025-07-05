@@ -1,16 +1,12 @@
 {
-  "name": "node-ffi-example",
-  "description": "Node.js FFI Example (Koffi, ffi-rs, ffi-napi)",
+  "name": "node-call-cpp-examples",
+  "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Koffi",
-    "ffi-rs",
-    "ffi-napi"
-  ],
+  "keywords": [],
   "author": "ssnangua",
   "license": "MIT",
   "dependencies": {
