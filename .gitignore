@@ -4,3 +4,6 @@ addon/build/*
 !addon/build/Release/
 addon/build/Release/*
 !addon/build/Release/*.node
+
+wasi/wasi-sdk-*
+wasi/*.txt

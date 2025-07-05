@@ -1,4 +1,4 @@
-# Node.js FFI Example
+# Node.js Call C++ Examples
 
 Install dependencies: [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
 
@@ -51,6 +51,20 @@ emcc ./wasm/add.cc -o ./wasm/add.wasm --no-entry -sEXPORTED_FUNCTIONS=_add
 
 # Use wasm
 node ./wasm/wasm.js
+```
+
+Download [WASI SDK](https://github.com/WebAssembly/wasi-sdk)
+
+## wasi
+
+```bash
+# Compile wasm
+node ./wasi/build.js $WASI_SDK_DIR
+# Or
+$WASI_SDK_DIR/bin/clang.exe --target=wasm32-wasi --sysroot=$WASI_SDK_DIR/share/wasi-sysroot ./wasi/fopen.cc -o ./wasi/fopen.wasm -mexec-model=reactor -Wl,--export=alloc -Wl,--export=writeFile
+
+# Use wasm
+node --no-warnings ./wasi/wasi.js
 ```
 
 ## addon
