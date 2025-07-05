@@ -53,9 +53,9 @@ emcc ./wasm/add.cc -o ./wasm/add.wasm --no-entry -sEXPORTED_FUNCTIONS=_add
 node ./wasm/wasm.js
 ```
 
-Download [WASI SDK](https://github.com/WebAssembly/wasi-sdk)
-
 ## wasi
+
+Download [WASI SDK](https://github.com/WebAssembly/wasi-sdk)
 
 ```bash
 # Compile wasm
