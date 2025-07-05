@@ -1,4 +1,10 @@
-[TOC]
+- [Node.js Call C++ Examples](#nodejs-call-c-examples)
+  - [dll](#dll)
+  - [user32.dll](#user32dll)
+  - [exe](#exe)
+  - [wasm](#wasm)
+  - [wasi](#wasi)
+  - [addon](#addon)
 
 # Node.js Call C++ Examples
 
