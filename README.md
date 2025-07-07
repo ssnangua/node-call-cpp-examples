@@ -6,19 +6,19 @@
     - [NAN](#nan)
     - [Node-API](#node-api)
     - [node-addon-api](#node-addon-api)
-    - [\* NAPI-RS](#-napi-rs)
+    - [\*NAPI-RS](#napi-rs)
   - [Executable File (.exe)](#executable-file-exe)
     - [C++](#c)
-    - [\* Rust](#-rust)
-    - [\* Python](#-python)
+    - [\*Rust](#rust)
+    - [\*Python](#python)
   - [Dynamic Link Library (.dll)](#dynamic-link-library-dll)
     - [user32.dll](#user32dll)
     - [C++](#c-1)
-    - [\* Rust](#-rust-1)
+    - [\*Rust](#rust-1)
   - [WebAssembly (.wasm)](#webassembly-wasm)
     - [wasm](#wasm)
     - [wasm + WASI](#wasm--wasi)
-    - [\* Rust](#-rust-2)
+    - [\*Rust](#rust-2)
 
 ## Addon (.node)
 
@@ -88,7 +88,7 @@ cd ../../
 
 > Official example: [node-addon-api](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
 
-### * [NAPI-RS](https://github.com/napi-rs/napi-rs)
+### *[NAPI-RS](https://github.com/napi-rs/napi-rs)
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -128,7 +128,7 @@ node ./test.js
 cd ../../
 ```
 
-### * Rust
+### *Rust
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -144,7 +144,7 @@ node ./test.js
 cd ../../
 ```
 
-### * Python
+### *Python
 
 Install [Python](https://www.python.org/downloads/)
 
@@ -203,7 +203,7 @@ node ./test-ffi-napi.js
 cd ../../
 ```
 
-### * Rust
+### *Rust
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -265,7 +265,7 @@ node --no-warnings ./test.js
 cd ../../
 ```
 
-### * Rust
+### *Rust
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
