@@ -17,7 +17,7 @@
     - [\*Rust](#rust-1)
   - [WebAssembly (.wasm)](#webassembly-wasm)
     - [wasm](#wasm)
-    - [wasm + WASI](#wasm--wasi)
+    - [WASI](#wasi)
     - [\*Rust](#rust-2)
 
 ## Addon (.node)
@@ -247,7 +247,7 @@ cd ../../
 
 > See also: [MDN | Compiling a new C/C++ module to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/C_to_Wasm)
 
-### wasm + [WASI](https://github.com/WebAssembly/WASI)
+### [WASI](https://github.com/WebAssembly/WASI)
 
 Download [WASI SDK](https://github.com/WebAssembly/wasi-sdk)
 
