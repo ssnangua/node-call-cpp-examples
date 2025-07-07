@@ -1,7 +1,7 @@
 # Node.js Call C++ Examples
 
 1. Addon: [node](#node) | [NAN](#nan) | [Node-API](#node-api) | [node-addon-api](#node-addon-api)
-2. EXE: [exe](#exe)
+2. EXE: [C++](#c) | [Rust](#rust) | [Python](#python)
 3. DLL: [user32.dll](#user32dll) | [dll](#dll)
 4. WebAssembly: [wasm](#wasm) | [wasm + WASI](#wasm--wasi)
 
@@ -73,12 +73,14 @@ cd ../../
 
 > Official example: [node-addon-api](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
 
-### EXE
+## EXE
+
+### C++
 
 Install [MinGW](https://www.mingw-w64.org/)
 
 ```bash
-cd ./exe/
+cd ./exe/cpp/
 
 # Compile exe
 gcc ./add.cc -o ./add.exe
@@ -86,7 +88,41 @@ gcc ./add.cc -o ./add.exe
 # Use exe
 node ./test.js
 
-cd ../
+cd ../../
+```
+
+### Rust
+
+Install [Rust](https://www.rust-lang.org/tools/install)
+
+```bash
+cd ./exe/rs/
+
+# Compile exe
+cargo build -r
+
+# Use exe
+node ./test.js
+
+cd ../../
+```
+
+### Python
+
+Install [Python](https://www.python.org/downloads/)
+
+Install `pyinstaller`: `pip install pyinstaller`
+
+```bash
+cd ./exe/py/
+
+# Compile exe
+pyinstaller add.py -F
+
+# Use exe
+node ./test.js
+
+cd ../../
 ```
 
 ## Dynamic Link Libraries
