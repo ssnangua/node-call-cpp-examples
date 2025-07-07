@@ -195,6 +195,9 @@ Install [Rust](https://www.rust-lang.org/tools/install)
 ```bash
 cd ./dll/rs/
 
+# Install dependencies (koffi, ffi-rs, ffi-napi)
+npm install
+
 # Compile dll
 cargo build --release
 
