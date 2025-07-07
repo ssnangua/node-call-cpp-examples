@@ -3,7 +3,7 @@
 const rs = require("ffi-rs");
 const { Double } = rs.DataType;
 
-rs.open({ library: "dll", path: "./dll/add.dll" });
+rs.open({ library: "dll", path: "./add.dll" });
 
 const { add } = rs.define({
   add: {

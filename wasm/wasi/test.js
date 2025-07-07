@@ -6,11 +6,11 @@ const wasi = new WASI({
   args: process.argv,
   env: process.env,
   preopens: {
-    ".": "./wasi",
+    ".": "./",
   },
 });
 
-const wasmBuffer = fs.readFileSync("./wasi/fopen.wasm");
+const wasmBuffer = fs.readFileSync("./fopen.wasm");
 const wasmModule = new WebAssembly.Module(wasmBuffer);
 const wasmInstance = new WebAssembly.Instance(wasmModule, wasi.getImportObject());
 wasi.initialize(wasmInstance);

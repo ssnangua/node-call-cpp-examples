@@ -1,15 +1,66 @@
 # Node.js Call C++ Examples
 
-[addon](#addon) | [exe](#exe) | [user32.dll](#user32dll) | [dll](#dll) | [wasm](#wasm) | [wasi](#wasi)
+1. Addon: [node](#node) | [NAN](#nan) | [Node-API](#node-api) | [node-addon-api](#node-addon-api)
+2. EXE: [exe](#exe)
+3. DLL: [user32.dll](#user32dll) | [dll](#dll)
+4. WebAssembly: [wasm](#wasm) | [wasm + WASI](#wasm--wasi)
 
-## addon
-
-> Official `node-addon-api` example: [Pass arguments to a function](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
+## Addon
 
 Install [node-gyp](https://github.com/nodejs/node-gyp)
 
+### node
+
 ```bash
-cd ./addon
+cd ./addon/node/
+
+# Build addon
+node-gyp rebuild
+
+# Use addon
+node ./test.js
+
+cd ../../
+```
+
+> Official example: [Function arguments](https://nodejs.org/download/release/v22.15.1/docs/api/addons.html#function-arguments)
+
+### NAN
+
+```bash
+cd ./addon/nan/
+
+# Install dependencies (nan, bindings) and build addon
+npm install
+
+# Use addon
+node ./test.js
+
+cd ../../
+```
+
+> Official example: [nan](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/nan)
+
+### Node-API
+
+```bash
+cd ./addon/napi/
+
+# Build addon
+node-gyp rebuild
+
+# Use addon
+node ./test.js
+
+cd ../../
+```
+
+> Official example: [napi](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/napi)
+
+### node-addon-api
+
+```bash
+cd ./addon/node-addon-api/
 
 # Install dependencies (node-addon-api, bindings) and build addon
 npm install
@@ -17,78 +68,97 @@ npm install
 # Use addon
 node ./test.js
 
-cd ..
+cd ../../
 ```
 
-## exe
+> Official example: [node-addon-api](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
+
+### EXE
 
 Install [MinGW](https://www.mingw-w64.org/)
 
 ```bash
+cd ./exe/
+
 # Compile exe
-gcc ./exe/add.cc -o ./exe/add.exe
+gcc ./add.cc -o ./add.exe
 
 # Use exe
-node ./exe/exe.js
+node ./test.js
+
+cd ../
 ```
 
-## user32.dll
+## Dynamic Link Libraries
 
-Install [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
+Install [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi): `npm install`
 
-```bash
-npm install
-```
+### user32.dll
 
 ```bash
+cd ./dll/user32/
+
 # Use user32.dll
-node ./user32/koffi.js
-node ./user32/ffi-rs.js
-node ./user32/ffi-napi.js
+node ./test-koffi.js
+node ./test-ffi-rs.js
+node ./test-ffi-napi.js
+
+cd ../../
 ```
 
-## dll
-
-Install [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
-
-```bash
-npm install
-```
+### dll
 
 Install [MinGW](https://www.mingw-w64.org/)
 
 ```bash
+cd ./dll/dll/
+
 # Compile dll
-gcc ./dll/add.cc -shared -o ./dll/add.dll
+gcc ./add.cc -shared -o ./add.dll
 
 # Use dll
-node ./dll/koffi.js
-node ./dll/ffi-rs.js
-node ./dll/ffi-napi.js
+node ./test-koffi.js
+node ./test-ffi-rs.js
+node ./test-ffi-napi.js
+
+cd ../../
 ```
 
-## wasm
+## WebAssembly
+
+### wasm
 
 Install [Emscripten](https://github.com/emscripten-core/emsdk)
 
 ```bash
+cd ./wasm/wasm/
+
 # Compile wasm
-emcc ./wasm/add.cc -o ./wasm/add.wasm --no-entry -sEXPORTED_FUNCTIONS=_add
+emcc ./add.cc -o ./add.wasm --no-entry -sEXPORTED_FUNCTIONS=_add
 
 # Use wasm
-node ./wasm/wasm.js
+node ./test-node.js
+
+# Use wasm in Browser
+node ./test-browser.js
+
+cd ../../
 ```
 
-## wasi
+### wasm + WASI
 
 Download [WASI SDK](https://github.com/WebAssembly/wasi-sdk)
 
 ```bash
+cd ./wasm/wasi/
+
 # Compile wasm
-node ./wasi/build.js $WASI_SDK_DIR
+node ./build.js $WASI_SDK_DIR
 # Or
-$WASI_SDK_DIR/bin/clang.exe --target=wasm32-wasi --sysroot=$WASI_SDK_DIR/share/wasi-sysroot ./wasi/fopen.cc -o ./wasi/fopen.wasm -mexec-model=reactor -Wl,--export=alloc -Wl,--export=writeFile
+$WASI_SDK_DIR/bin/clang.exe --target=wasm32-wasi --sysroot=$WASI_SDK_DIR/share/wasi-sysroot ./fopen.cc -o ./fopen.wasm -mexec-model=reactor "-Wl,--export=alloc,--export=writeFile"
 
 # Use wasm
-node --no-warnings ./wasi/wasi.js
+node --no-warnings ./test.js
+
+cd ../../
 ```

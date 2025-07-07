@@ -8,9 +8,9 @@ execFile(
   [
     "--target=wasm32-wasi",
     "--sysroot=" + path.join(sdk, "/share/wasi-sysroot"),
-    "./wasi/fopen.cc",
+    "./fopen.cc",
     "-o",
-    "./wasi/fopen.wasm",
+    "./fopen.wasm",
     "-mexec-model=reactor",
     "-Wl,--export=alloc,--export=writeFile",
   ],

@@ -3,7 +3,7 @@
 const koffi = require("koffi");
 
 // 加载add.dll
-const lib = koffi.load("./dll/add.dll");
+const lib = koffi.load("./add.dll");
 
 // 声明dll中的函数
 // const add = lib.func("add", "double", ["double", "double"]);
