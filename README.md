@@ -24,7 +24,7 @@
 
 Install [node-gyp](https://github.com/nodejs/node-gyp)
 
-### node
+### [node](https://nodejs.org/download/release/v22.15.1/docs/api/addons.html)
 
 ```bash
 cd ./addon/node/
@@ -40,7 +40,7 @@ cd ../../
 
 > Official example: [Function arguments](https://nodejs.org/download/release/v22.15.1/docs/api/addons.html#function-arguments)
 
-### NAN
+### [NAN](https://github.com/nodejs/nan)
 
 ```bash
 cd ./addon/nan/
@@ -56,7 +56,7 @@ cd ../../
 
 > Official example: [nan](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/nan)
 
-### Node-API
+### [Node-API](https://nodejs.org/download/release/v22.15.1/docs/api/n-api.html)
 
 ```bash
 cd ./addon/napi/
@@ -72,7 +72,7 @@ cd ../../
 
 > Official example: [napi](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/napi)
 
-### node-addon-api
+### [node-addon-api](https://github.com/nodejs/node-addon-api)
 
 ```bash
 cd ./addon/node-addon-api/
@@ -148,7 +148,7 @@ cd ../../
 
 Install [Python](https://www.python.org/downloads/)
 
-Install `pyinstaller`: `pip install pyinstaller`
+Install [pyinstaller](https://github.com/pyinstaller/pyinstaller): `pip install pyinstaller`
 
 ```bash
 cd ./exe/py/
@@ -245,7 +245,9 @@ node ./test-browser.js
 cd ../../
 ```
 
-### wasm + WASI
+> See also: [Compiling a new C/C++ module to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/C_to_Wasm)
+
+### wasm + [WASI](https://github.com/WebAssembly/WASI)
 
 Download [WASI SDK](https://github.com/WebAssembly/wasi-sdk)
 
