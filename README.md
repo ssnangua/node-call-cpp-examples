@@ -6,15 +6,15 @@
     - [NAN](#nan)
     - [Node-API](#node-api)
     - [node-addon-api](#node-addon-api)
-    - [NAPI-RS](#napi-rs)
+    - [_NAPI-RS_](#napi-rs)
   - [EXE](#exe)
     - [C++](#c)
-    - [Rust](#rust)
-    - [Python](#python)
+    - [_Rust_](#rust)
+    - [_Python_](#python)
   - [DLL](#dll)
     - [user32.dll](#user32dll)
     - [C++](#c-1)
-    - [Rust](#rust-1)
+    - [_Rust_](#rust-1)
   - [WebAssembly](#webassembly)
     - [wasm](#wasm)
     - [wasm + WASI](#wasm--wasi)
@@ -87,7 +87,7 @@ cd ../../
 
 > Official example: [node-addon-api](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
 
-### NAPI-RS
+### _NAPI-RS_
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -127,7 +127,7 @@ node ./test.js
 cd ../../
 ```
 
-### Rust
+### _Rust_
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -143,7 +143,7 @@ node ./test.js
 cd ../../
 ```
 
-### Python
+### _Python_
 
 Install [Python](https://www.python.org/downloads/)
 
@@ -202,7 +202,7 @@ node ./test-ffi-napi.js
 cd ../../
 ```
 
-### Rust
+### _Rust_
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
