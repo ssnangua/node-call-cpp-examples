@@ -19,9 +19,9 @@ Napi::Value Add(const Napi::CallbackInfo &info)
     return env.Null();
   }
 
-  double arg0 = info[0].As<Napi::Number>().DoubleValue();
-  double arg1 = info[1].As<Napi::Number>().DoubleValue();
-  Napi::Number num = Napi::Number::New(env, arg0 + arg1);
+  double left = info[0].As<Napi::Number>().DoubleValue();
+  double right = info[1].As<Napi::Number>().DoubleValue();
+  Napi::Number num = Napi::Number::New(env, left + right);
 
   return num;
 }

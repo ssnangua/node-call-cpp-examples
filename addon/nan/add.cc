@@ -16,11 +16,11 @@ void Add(const Nan::FunctionCallbackInfo<v8::Value> &info)
     return;
   }
 
-  double arg0 = info[0]->NumberValue(context).FromJust();
-  double arg1 = info[1]->NumberValue(context).FromJust();
-  v8::Local<v8::Number> num = Nan::New(arg0 + arg1);
+  double left = info[0]->NumberValue(context).FromJust();
+  double right = info[1]->NumberValue(context).FromJust();
+  v8::Local<v8::Number> sum = Nan::New(left + right);
 
-  info.GetReturnValue().Set(num);
+  info.GetReturnValue().Set(sum);
 }
 
 void Init(v8::Local<v8::Object> exports)

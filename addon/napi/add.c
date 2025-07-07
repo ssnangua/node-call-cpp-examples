@@ -31,16 +31,16 @@ static napi_value Add(napi_env env, napi_callback_info info)
     return NULL;
   }
 
-  double value0;
-  status = napi_get_value_double(env, args[0], &value0);
+  double left;
+  status = napi_get_value_double(env, args[0], &left);
   assert(status == napi_ok);
 
-  double value1;
-  status = napi_get_value_double(env, args[1], &value1);
+  double right;
+  status = napi_get_value_double(env, args[1], &right);
   assert(status == napi_ok);
 
   napi_value sum;
-  status = napi_create_double(env, value0 + value1, &sum);
+  status = napi_create_double(env, left + right, &sum);
   assert(status == napi_ok);
 
   return sum;

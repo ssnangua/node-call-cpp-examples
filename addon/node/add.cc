@@ -1,34 +1,35 @@
 #include <node.h>
 
-using namespace v8;
-
-void Add(const FunctionCallbackInfo<Value> &args)
+void Add(const v8::FunctionCallbackInfo<v8::Value> &args)
 {
-  Isolate *isolate = args.GetIsolate();
+  v8::Isolate *isolate = args.GetIsolate();
 
   if (args.Length() < 2)
   {
     isolate->ThrowException(
-        Exception::TypeError(
-            String::NewFromUtf8(isolate, "Wrong number of arguments").ToLocalChecked()));
+        v8::Exception::TypeError(
+            v8::String::NewFromUtf8(isolate, "Wrong number of arguments")
+                .ToLocalChecked()));
     return;
   }
 
   if (!args[0]->IsNumber() || !args[1]->IsNumber())
   {
     isolate->ThrowException(
-        Exception::TypeError(
-            String::NewFromUtf8(isolate, "Wrong arguments").ToLocalChecked()));
+        v8::Exception::TypeError(
+            v8::String::NewFromUtf8(isolate, "Wrong arguments")
+                .ToLocalChecked()));
     return;
   }
 
-  double value = args[0].As<Number>()->Value() + args[1].As<Number>()->Value();
-  Local<Number> num = Number::New(isolate, value);
+  double left = args[0].As<v8::Number>()->Value();
+  double right = args[1].As<v8::Number>()->Value();
+  v8::Local<v8::Number> sum = v8::Number::New(isolate, left + right);
 
-  args.GetReturnValue().Set(num);
+  args.GetReturnValue().Set(sum);
 }
 
-void Init(Local<Object> exports)
+void Init(v8::Local<v8::Object> exports)
 {
   NODE_SET_METHOD(exports, "add", Add);
 }
