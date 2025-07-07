@@ -2,7 +2,7 @@
 
 1. Addon: [node](#node) | [NAN](#nan) | [Node-API](#node-api) | [node-addon-api](#node-addon-api) | [_NAPI-RS_](#napi-rs)
 2. EXE: [C++](#c) | [_Rust_](#rust) | [_Python_](#python)
-3. DLL: [user32.dll](#user32dll) | [dll](#dll)
+3. DLL: [user32.dll](#user32dll) | [C++](#c-1) | [_Rust_](#rust-1)
 4. WebAssembly: [wasm](#wasm) | [wasm + WASI](#wasm--wasi)
 
 ## Addon
@@ -121,7 +121,7 @@ Install [Rust](https://www.rust-lang.org/tools/install)
 cd ./exe/rs/
 
 # Compile exe
-cargo build -r
+cargo build --release
 
 # Use exe
 node ./test.js
@@ -149,12 +149,15 @@ cd ../../
 
 ## Dynamic Link Libraries
 
-Install [Koffi](https://koffi.dev/start), [ffi-rs](https://github.com/zhangyuang/node-ffi-rs), [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi): `npm install`
+[Koffi](https://koffi.dev/start) | [ffi-rs](https://github.com/zhangyuang/node-ffi-rs) | [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
 
 ### user32.dll
 
 ```bash
 cd ./dll/user32/
+
+# Install dependencies (koffi, ffi-rs, ffi-napi, iconv-lite)
+npm install
 
 # Use user32.dll
 node ./test-koffi.js
@@ -164,15 +167,36 @@ node ./test-ffi-napi.js
 cd ../../
 ```
 
-### dll
+### C++
 
 Install [MinGW](https://www.mingw-w64.org/)
 
 ```bash
-cd ./dll/dll/
+cd ./dll/cpp/
+
+# Install dependencies (koffi, ffi-rs, ffi-napi)
+npm install
 
 # Compile dll
 gcc ./add.cc -shared -o ./add.dll
+
+# Use dll
+node ./test-koffi.js
+node ./test-ffi-rs.js
+node ./test-ffi-napi.js
+
+cd ../../
+```
+
+### Rust
+
+Install [Rust](https://www.rust-lang.org/tools/install)
+
+```bash
+cd ./dll/rs/
+
+# Compile dll
+cargo build --release
 
 # Use dll
 node ./test-koffi.js

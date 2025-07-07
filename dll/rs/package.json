@@ -1,0 +1,17 @@
+{
+  "name": "cpp-dll-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ssnangua",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "ffi-napi": "^4.0.3",
+    "ffi-rs": "^1.2.12",
+    "koffi": "^2.12.0"
+  }
+}

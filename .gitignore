@@ -1,5 +1,6 @@
 .vscode/
 node_modules/
+package-lock.json
 
 addon/**/build/*
 !addon/**/build/Release/
@@ -8,14 +9,15 @@ addon/**/build/Release/*
 
 addon/napi-rs/target/
 
-exe/rs/*.lock
-exe/rs/target/*
-!exe/rs/target/release/
-exe/rs/target/release/*
-!exe/rs/target/release/*.exe
-exe/py/build/
+Cargo.lock
+**/rs/target/*
+!**/rs/target/release/
+**/rs/target/release/*
+!**/rs/target/release/*.exe
+!**/rs/target/release/*.dll
 
-exe/py/*.spec
+*.spec
+**/py/build/
 
 wasm/wasi/wasi-sdk*
 wasm/wasi/*.txt
