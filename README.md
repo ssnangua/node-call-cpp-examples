@@ -24,7 +24,7 @@
 
 Install [node-gyp](https://github.com/nodejs/node-gyp)
 
-### [node](https://nodejs.org/download/release/v22.15.1/docs/api/addons.html)
+### [node](https://nodejs.org/api/addons.html)
 
 ```bash
 cd ./addon/node/
@@ -38,7 +38,7 @@ node ./test.js
 cd ../../
 ```
 
-> Official example: [Function arguments](https://nodejs.org/download/release/v22.15.1/docs/api/addons.html#function-arguments)
+> Official example: [Node.js | C++ addons: Function arguments](https://nodejs.org/api/addons.html#function-arguments)
 
 ### [NAN](https://github.com/nodejs/nan)
 
@@ -56,7 +56,7 @@ cd ../../
 
 > Official example: [nan](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/nan)
 
-### [Node-API](https://nodejs.org/download/release/v22.15.1/docs/api/n-api.html)
+### [Node-API](https://nodejs.org/api/n-api.html)
 
 ```bash
 cd ./addon/napi/
@@ -245,7 +245,7 @@ node ./test-browser.js
 cd ../../
 ```
 
-> See also: [Compiling a new C/C++ module to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/C_to_Wasm)
+> See also: [MDN | Compiling a new C/C++ module to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/C_to_Wasm)
 
 ### wasm + [WASI](https://github.com/WebAssembly/WASI)
 
@@ -292,4 +292,4 @@ node ./test-browser.js
 cd ../../
 ```
 
-> See also: [Compiling from Rust to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm)
+> See also: [MDN | Compiling from Rust to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm)
