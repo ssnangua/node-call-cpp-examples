@@ -1,7 +1,7 @@
 # Node.js Call C++ Examples
 
-1. Addon: [node](#node) | [NAN](#nan) | [Node-API](#node-api) | [node-addon-api](#node-addon-api)
-2. EXE: [C++](#c) | [Rust](#rust) | [Python](#python)
+1. Addon: [node](#node) | [NAN](#nan) | [Node-API](#node-api) | [node-addon-api](#node-addon-api) | [_NAPI-RS_](#napi-rs)
+2. EXE: [C++](#c) | [_Rust_](#rust) | [_Python_](#python)
 3. DLL: [user32.dll](#user32dll) | [dll](#dll)
 4. WebAssembly: [wasm](#wasm) | [wasm + WASI](#wasm--wasi)
 
@@ -72,6 +72,28 @@ cd ../../
 ```
 
 > Official example: [node-addon-api](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
+
+### NAPI-RS
+
+Install [Rust](https://www.rust-lang.org/tools/install)
+
+```bash
+cd ./addon/napi-rs/
+
+# Install Node dependencies (@napi-rs/cli)
+npm install
+
+# Install dependencies (napi, napi-derive, napi-build)
+cargo update
+
+# Build addon
+npm run build
+
+# Use addon
+node ./test.js
+
+cd ../../
+```
 
 ## EXE
 

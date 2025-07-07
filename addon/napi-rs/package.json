@@ -1,0 +1,19 @@
+{
+  "name": "napi-rs-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "napi build --platform --release addon",
+    "test": "node ./test.js"
+  },
+  "keywords": [],
+  "author": "ssnangua",
+  "license": "MIT",
+  "description": "",
+  "napi": {
+    "name": "add"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.4"
+  }
+}
