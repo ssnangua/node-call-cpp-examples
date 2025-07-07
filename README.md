@@ -88,7 +88,7 @@ cd ../../
 
 > Official example: [node-addon-api](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
 
-### *[NAPI-RS](https://github.com/napi-rs/napi-rs)
+### \*[NAPI-RS](https://github.com/napi-rs/napi-rs)
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -128,7 +128,7 @@ node ./test.js
 cd ../../
 ```
 
-### *Rust
+### \*Rust
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -144,7 +144,7 @@ node ./test.js
 cd ../../
 ```
 
-### *Python
+### \*Python
 
 Install [Python](https://www.python.org/downloads/)
 
@@ -203,7 +203,7 @@ node ./test-ffi-napi.js
 cd ../../
 ```
 
-### *Rust
+### \*Rust
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -265,7 +265,7 @@ node --no-warnings ./test.js
 cd ../../
 ```
 
-### *Rust
+### \*Rust
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
@@ -293,3 +293,8 @@ cd ../../
 ```
 
 > See also: [MDN | Compiling from Rust to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm)
+
+<style>
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
