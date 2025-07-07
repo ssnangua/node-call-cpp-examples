@@ -83,7 +83,7 @@ cd ./addon/napi-rs/
 # Install Node dependencies (@napi-rs/cli)
 npm install
 
-# Install dependencies (napi, napi-derive, napi-build)
+# Install Rust dependencies (napi, napi-derive, napi-build)
 cargo update
 
 # Build addon
