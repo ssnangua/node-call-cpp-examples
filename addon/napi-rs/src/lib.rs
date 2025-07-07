@@ -4,6 +4,6 @@
 extern crate napi_derive;
 
 #[napi]
-pub fn add(a: f64, b: f64) -> f64 {
-  a + b
+pub fn add(left: f64, right: f64) -> f64 {
+  left + right
 }

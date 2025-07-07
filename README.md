@@ -18,6 +18,7 @@
   - [WebAssembly (.wasm)](#webassembly-wasm)
     - [wasm](#wasm)
     - [wasm + WASI](#wasm--wasi)
+    - [_Rust_](#rust-2)
 
 ## Addon (.node)
 
@@ -258,6 +259,33 @@ $WASI_SDK_DIR/bin/clang.exe --target=wasm32-wasi --sysroot=$WASI_SDK_DIR/share/w
 
 # Use wasm
 node --no-warnings ./test.js
+
+cd ../../
+```
+
+### _Rust_
+
+Install [Rust](https://www.rust-lang.org/tools/install)
+
+Install [wasm-pack](https://rustwasm.github.io/wasm-pack/): `cargo install wasm-pack`
+
+```bash
+cd ./wasm/rs/
+
+# Install dependencies (wasm-bindgen)
+cargo update
+
+# Compile wasm for Node
+wasm-pack build --release --target nodejs --out-dir ./node
+
+# Compile wasm for browser
+wasm-pack build --release --target web --out-dir ./web
+
+# Use wasm
+node ./test-node.js
+
+# Use wasm in Browser
+node ./test-browser.js
 
 cd ../../
 ```

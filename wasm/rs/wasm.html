@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebAssembly Example</title>
+    <style>
+      input {
+        width: 60px;
+        outline: none;
+        border-width: 1px;
+        border-radius: 2px;
+        padding: 2px 4px;
+
+        &[readonly] {
+          background-color: #eee;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="number" id="leftInput" value="1" />
+      +
+      <input type="number" id="rightInput" value="2.5" />
+      =
+      <input type="number" id="sumInput" value="" readonly />
+    </div>
+
+    <script type="module">
+      import { default as loadWasm, add } from "./web/add.js";
+      await loadWasm("./web/add_bg.wasm");
+
+      function callWasm() {
+        const left = parseFloat(leftInput.value);
+        const right = parseFloat(rightInput.value);
+        sumInput.value = add(left, right);
+      }
+      callWasm();
+      leftInput.onchange = rightInput.onchange = callWasm;
+    </script>
+  </body>
+</html>
