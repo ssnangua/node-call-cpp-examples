@@ -88,7 +88,7 @@ cd ../../
 
 > Official example: [node-addon-api](https://github.com/nodejs/node-addon-examples/tree/main/src/1-getting-started/2_function_arguments/node-addon-api)
 
-### _NAPI-RS_
+### [_NAPI-RS_](https://github.com/napi-rs/napi-rs)
 
 Install [Rust](https://www.rust-lang.org/tools/install)
 
