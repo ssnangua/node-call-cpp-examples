@@ -293,8 +293,3 @@ cd ../../
 ```
 
 > See also: [MDN | Compiling from Rust to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm)
-
-<style>
-  a { text-decoration: none; }
-  a:hover { text-decoration: underline; }
-</style>
