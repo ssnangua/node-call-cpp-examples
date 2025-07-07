@@ -1,25 +1,25 @@
 # Node.js Call C++ Examples
 
 - [Node.js Call C++ Examples](#nodejs-call-c-examples)
-  - [Addon](#addon)
+  - [Addon (.node)](#addon-node)
     - [node](#node)
     - [NAN](#nan)
     - [Node-API](#node-api)
     - [node-addon-api](#node-addon-api)
     - [_NAPI-RS_](#napi-rs)
-  - [EXE](#exe)
+  - [Executable File (.exe)](#executable-file-exe)
     - [C++](#c)
     - [_Rust_](#rust)
     - [_Python_](#python)
-  - [DLL](#dll)
+  - [Dynamic Link Library (.dll)](#dynamic-link-library-dll)
     - [user32.dll](#user32dll)
     - [C++](#c-1)
     - [_Rust_](#rust-1)
-  - [WebAssembly](#webassembly)
+  - [WebAssembly (.wasm)](#webassembly-wasm)
     - [wasm](#wasm)
     - [wasm + WASI](#wasm--wasi)
 
-## Addon
+## Addon (.node)
 
 Install [node-gyp](https://github.com/nodejs/node-gyp)
 
@@ -109,7 +109,7 @@ node ./test.js
 cd ../../
 ```
 
-## EXE
+## Executable File (.exe)
 
 ### C++
 
@@ -161,7 +161,7 @@ node ./test.js
 cd ../../
 ```
 
-## DLL
+## Dynamic Link Library (.dll)
 
 [Koffi](https://koffi.dev/start) | [ffi-rs](https://github.com/zhangyuang/node-ffi-rs) | [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
 
@@ -223,7 +223,7 @@ node ./test-ffi-napi.js
 cd ../../
 ```
 
-## WebAssembly
+## WebAssembly (.wasm)
 
 ### wasm
 
