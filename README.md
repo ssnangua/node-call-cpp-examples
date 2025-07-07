@@ -1,9 +1,23 @@
 # Node.js Call C++ Examples
 
-1. Addon: [node](#node) | [NAN](#nan) | [Node-API](#node-api) | [node-addon-api](#node-addon-api) | [_NAPI-RS_](#napi-rs)
-2. EXE: [C++](#c) | [_Rust_](#rust) | [_Python_](#python)
-3. DLL: [user32.dll](#user32dll) | [C++](#c-1) | [_Rust_](#rust-1)
-4. WebAssembly: [wasm](#wasm) | [wasm + WASI](#wasm--wasi)
+- [Node.js Call C++ Examples](#nodejs-call-c-examples)
+  - [Addon](#addon)
+    - [node](#node)
+    - [NAN](#nan)
+    - [Node-API](#node-api)
+    - [node-addon-api](#node-addon-api)
+    - [NAPI-RS](#napi-rs)
+  - [EXE](#exe)
+    - [C++](#c)
+    - [Rust](#rust)
+    - [Python](#python)
+  - [DLL](#dll)
+    - [user32.dll](#user32dll)
+    - [C++](#c-1)
+    - [Rust](#rust-1)
+  - [WebAssembly](#webassembly)
+    - [wasm](#wasm)
+    - [wasm + WASI](#wasm--wasi)
 
 ## Addon
 
@@ -147,7 +161,7 @@ node ./test.js
 cd ../../
 ```
 
-## Dynamic Link Libraries
+## DLL
 
 [Koffi](https://koffi.dev/start) | [ffi-rs](https://github.com/zhangyuang/node-ffi-rs) | [ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi)
 
