@@ -289,3 +289,5 @@ node ./test-browser.js
 
 cd ../../
 ```
+
+> See also: [Compiling from Rust to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm)
